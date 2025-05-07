@@ -1,0 +1,8 @@
+C:\1_workspace\Study23\resource-server-a\src\main\java\kp\resource\server\a\Application.java
+C:\1_workspace\Study23\resource-server-a\src\main\java\kp\resource\server\a\configuration\BearerTokenInterceptor.java
+C:\1_workspace\Study23\resource-server-a\src\main\java\kp\resource\server\a\configuration\KeycloakJwtAuthenticationConverter.java
+C:\1_workspace\Study23\resource-server-a\src\main\java\kp\resource\server\a\configuration\ResourceServerConfiguration.java
+C:\1_workspace\Study23\resource-server-a\src\main\java\kp\resource\server\a\controllers\DocumentController.java
+C:\1_workspace\Study23\resource-server-a\src\main\java\kp\resource\server\a\controllers\ResourceServerInfoController.java
+C:\1_workspace\Study23\resource-server-a\src\main\java\kp\resource\server\a\model\ClassificationLevel.java
+C:\1_workspace\Study23\resource-server-a\src\main\java\kp\resource\server\a\services\DocumentService.java

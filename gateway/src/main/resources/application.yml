@@ -1,0 +1,49 @@
+server:
+  port: 8081
+  error:
+    include-message: always
+    include-binding-errors: always
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      default-filters:
+        - TokenRelay=
+      globalcors:
+        enabled: true
+      routes:
+        - id: resource-server-a
+          uri: http://resource-server-a:8082
+          predicates:
+            - Path=/api/**
+        - id: external
+          uri: https://httpbin.org
+          predicates:
+            - Path=/external/**
+          filters:
+            - RewritePath=/external/(?<segment>.*), /${segment}
+            - RemoveRequestHeader=Authorization
+  output:
+    ansi:
+      enabled: always
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://keycloak:8080/realms/spring/protocol/openid-connect/certs
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://keycloak:8080/realms/spring
+        registration:
+          spring-with-test-scope:
+            provider: keycloak
+            client-id: spring-with-test-scope
+            client-secret: IWLSnakHG8aNTWNaWuSj0a11UY4lzxd9
+            authorization-grant-type: authorization_code
+            scope: openid
+logging.level:
+  org.springframework.cloud.gateway: INFO
+  org.springframework.security: INFO
+  org.springframework.web.reactive.function.client: INFO
