@@ -1,4 +1,0 @@
-kp\resource\server\b\Application.class
-kp\resource\server\b\configuration\ResourceServerConfiguration.class
-kp\resource\server\b\configuration\KeycloakJwtAuthenticationConverter.class
-kp\resource\server\b\controllers\DocumentController.class

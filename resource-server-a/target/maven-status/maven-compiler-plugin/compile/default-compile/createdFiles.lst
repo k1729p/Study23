@@ -1,8 +1,0 @@
-kp\resource\server\a\configuration\BearerTokenInterceptor.class
-kp\resource\server\a\configuration\ResourceServerConfiguration.class
-kp\resource\server\a\model\ClassificationLevel.class
-kp\resource\server\a\services\DocumentService.class
-kp\resource\server\a\controllers\ResourceServerInfoController.class
-kp\resource\server\a\controllers\DocumentController.class
-kp\resource\server\a\Application.class
-kp\resource\server\a\configuration\KeycloakJwtAuthenticationConverter.class
