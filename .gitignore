@@ -1,0 +1,16 @@
+.idea
+.settings
+logs
+target
+.classpath
+.project
+*.iml
+.dockerignore
+account-receiver/.settings
+account-receiver/target
+account-receiver/.classpath
+account-receiver/.project
+account-sender/.settings
+account-sender/target
+account-sender/.classpath
+account-sender/.project

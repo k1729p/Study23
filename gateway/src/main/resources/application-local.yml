@@ -1,0 +1,29 @@
+server:
+  port: 9091
+spring:
+  config:
+    activate:
+      on-profile: local
+  cloud:
+    gateway:
+      routes:
+        - id: resource-server-a
+          uri: http://localhost:9092
+          predicates:
+            - Path=/api/**
+        - id: external
+          uri: https://httpbin.org
+          predicates:
+            - Path=/external/**
+          filters:
+            - RewritePath=/external/(?<segment>.*), /${segment}
+            - RemoveRequestHeader=Authorization
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8080/realms/spring/protocol/openid-connect/certs
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/realms/spring
