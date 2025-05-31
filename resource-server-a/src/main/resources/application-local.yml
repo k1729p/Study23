@@ -1,0 +1,13 @@
+server:
+  port: 9092
+spring:
+  config:
+    activate:
+      on-profile: local
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8080/realms/spring/protocol/openid-connect/certs
+custom:
+  next-resource-server-url: http://localhost:9093
